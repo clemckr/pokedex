@@ -230,7 +230,7 @@
   }
 }
 
-/** Custom CSS Variables **/
+/** Type colors CSS Variables **/
 .type-normal {
   --type-color: #a8a77a;
 }
@@ -238,7 +238,7 @@
   --type-color: #c22e28;
 }
 .type-flying {
-  --bacground: #a98ff3;
+  --type-color: #a98ff3;
 }
 .type-poison {
   --type-color: #a33ea1;
@@ -253,7 +253,7 @@
   --type-color: #a6b91a;
 }
 .type-ghost {
-  --bacground: #735797;
+  --type-color: #735797;
 }
 .type-steel {
   --type-color: #b7b7ce;
@@ -290,4 +290,10 @@
 }
 .type-shadow {
   --type-color: #5e33bb;
+}
+
+@media (prefers-color-scheme: dark) {
+  .type-unknown {
+    --type-color: #ffffff;
+  }
 }
