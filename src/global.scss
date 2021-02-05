@@ -30,63 +30,19 @@
   margin: auto;
 }
 
-.type-normal {
-  --type-color: #a8a77a;
+.img-container {
+  padding: 16px;
+  padding-top: calc(50% - 16px);
+  position: relative;
+  height: 0;
+  width: 100%;
+  margin-top: 16px;
 }
-.type-fighting {
-  --type-color: #c22e28;
-}
-.type-flying {
-  --bacground: #a98ff3;
-}
-.type-poison {
-  --type-color: #a33ea1;
-}
-.type-ground {
-  --type-color: #e2bf65;
-}
-.type-rock {
-  --type-color: #b6a136;
-}
-.type-bug {
-  --type-color: #a6b91a;
-}
-.type-ghost {
-  --bacground: #735797;
-}
-.type-steel {
-  --type-color: #b7b7ce;
-}
-.type-fire {
-  --type-color: #ee8130;
-}
-.type-water {
-  --type-color: #6390f0;
-}
-.type-grass {
-  --type-color: #7ac74c;
-}
-.type-electric {
-  --bacground: #f7d02c;
-}
-.type-psychic {
-  --type-color: #f95587;
-}
-.type-ice {
-  --type-color: #96d9d6;
-}
-.type-dragon {
-  --type-color: #6f35fc;
-}
-.type-dark {
-  --type-color: #705746;
-}
-.type-fairy {
-  --bacground: #d685ad;
-}
-.type-unknown {
-  --type-color: #000000;
-}
-.type-shadow {
-  --type-color: #5e33bb;
+
+.img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 50%;
 }

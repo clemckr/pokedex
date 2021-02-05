@@ -12,10 +12,12 @@
 <ion-content [fullscreen]="true">
   <div class="container">
     <div *ngIf="pokemon">
-      <img
-        class="img"
-        [src]="pokemon.sprites.other['official-artwork'].front_default"
-      />
+      <div class="img-container">
+        <img
+          class="img"
+          [src]="pokemon.sprites.other['official-artwork'].front_default"
+        />
+      </div>
 
       <h1>(#{{ pokemon.id }}) {{ pokemon.name }}</h1>
 
@@ -61,7 +63,13 @@
     </div>
 
     <div *ngIf="!pokemon && isLoading">
-      <ion-skeleton-text animated class="img img-loading"></ion-skeleton-text>
+      <div class="img-container">
+        <ion-skeleton-text
+          animated
+          class="img"
+          style="width: 100%; height: 100%"
+        ></ion-skeleton-text>
+      </div>
       <h1>
         <ion-skeleton-text
           animated
