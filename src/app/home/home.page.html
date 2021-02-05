@@ -5,11 +5,18 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Pokédex</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="container">
+    <ion-searchbar
+      (ionInput)="searchSubject.next($event.target.value)"
+    ></ion-searchbar>
 
-  <div id="container"></div>
+    <app-pokemons-list
+      [pokemons]="pokemons"
+      [isLoading]="isLoading"
+    ></app-pokemons-list>
+
+    <ion-text *ngIf="errorMessage" color="danger" style="text-align: center">
+      <h1>{{errorMessage}}</h1>
+    </ion-text>
+  </div>
 </ion-content>

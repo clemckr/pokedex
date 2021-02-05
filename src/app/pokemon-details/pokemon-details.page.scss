@@ -1,0 +1,46 @@
+.name {
+  text-transform: capitalize;
+}
+
+h1 {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+ion-item-group {
+  margin-bottom: 16px;
+}
+
+.img {
+  max-width: 50%;
+  display: block;
+  margin: auto;
+}
+.img-loading {
+  padding-top: 50%;
+}
+
+.type {
+  text-transform: capitalize;
+  --color: var(--type-color);
+}
+
+.ability {
+  text-transform: capitalize;
+}
+
+.stat {
+  text-transform: uppercase;
+}
+.stat-low {
+  --color: #f44336;
+}
+.stat-medium {
+  --color: #fbc02d;
+}
+.stat-high {
+  --color: #4caf50;
+}
+.stat-top {
+  --color: #1b5e20;
+}

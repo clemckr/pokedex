@@ -1,0 +1,26 @@
+<ion-grid>
+  <ion-row *ngIf="pokemons && !isLoading">
+    <ion-col *ngFor="let pokemon of pokemons" size="12" sizeSm="6" sizeLg="4">
+      <app-pokemon-card
+        [pokemon]="pokemon"
+        routerLink="/{{ pokemon.name }}"
+        routerDirection="forward"
+      ></app-pokemon-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-row *ngIf="isLoading">
+    <ion-col *ngFor="let a of [0, 0, 0, 0, 0]" size="12" sizeSm="6" sizeLg="4">
+      <div class="skel">
+        <ion-skeleton-text animated style="width: 100%; height: 303px">
+        </ion-skeleton-text>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<div *ngIf="pokemons && !isLoading">
+  <h1 *ngIf="!pokemons.length" style="text-align: center; margin-top: 48px">
+    Aucun résultat !
+  </h1>
+</div>

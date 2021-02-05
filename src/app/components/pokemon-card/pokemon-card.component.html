@@ -1,0 +1,25 @@
+<ion-card>
+  <div class="img-container">
+    <img
+      [src]="pokemon.sprites.other['official-artwork'].front_default"
+      class="img"
+    />
+  </div>
+  <ion-card-header>
+    <ion-card-subtitle># {{ pokemon.id }}</ion-card-subtitle>
+    <ion-card-title style="text-transform: capitalize">
+      {{ pokemon.name }}
+    </ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <div class="types">
+      <ion-badge
+        *ngFor="let type of pokemon.types"
+        [ngClass]="['type', 'type-' + type.type.name]"
+      >
+        {{ type.type.name }}
+      </ion-badge>
+    </div>
+  </ion-card-content>
+</ion-card>

@@ -1,0 +1,19 @@
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.img {
+  max-width: 50%;
+}
+
+.types {
+  display: flex;
+  gap: 8px;
+}
+
+.type {
+  --background: var(--type-color);
+}
